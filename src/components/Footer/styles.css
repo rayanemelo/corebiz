@@ -17,7 +17,7 @@ footer .container {
   padding: 25px 16px;
 }
 
-.container .location h1 {
+footer .container .location h1 {
   font-size: 20px;
   font-weight: 700;
   width: 45px;
@@ -25,14 +25,14 @@ footer .container {
   padding-bottom: 20px;
 }
 
-.container .location p {
+footer .container .location p {
   font-size: 13px;
   font-weight: 400;
   line-height: 26px;
   margin-top: 18px;
 }
 
-.container .buttons {
+footer .container .buttons {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -67,7 +67,7 @@ footer .container .logos p {
     margin: 10px 0;
   }
 
-  .container .buttons button {
+  footer .container .buttons button {
     margin: 5px 0;
   }
 }
