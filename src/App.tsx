@@ -1,7 +1,12 @@
+import Layout from "./layout";
 import { Home } from "./pages/Home";
 
 const App = () => {
-  return <Home />;
+  return (
+    <Layout>
+      <Home />
+    </Layout>
+  );
 };
 
 export default App;

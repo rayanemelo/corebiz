@@ -32,7 +32,7 @@ export const Header: FC<any> = () => {
           </div>
         </div>
       </header>
-      <Drawer isOpen={open} onClose={() => setOpen(!open)} />
+      {open && <Drawer isOpen={open} onClose={() => setOpen(!open)} />}
     </>
   );
 };
