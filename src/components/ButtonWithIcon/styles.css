@@ -1,0 +1,12 @@
+.button-icon {
+  display: flex;
+  align-items: center;
+  width: 195px;
+  height: 38px;
+  font-size: 12px;
+  font-weight: 600;
+  background-color: #fff;
+  cursor: pointer;
+  color: black;
+  border: none;
+}
