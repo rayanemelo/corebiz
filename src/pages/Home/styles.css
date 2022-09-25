@@ -1,0 +1,7 @@
+.home h1 {
+  font-weight: 900;
+  font-size: 20px;
+  border-bottom: 4px solid #c0c0c0;
+  width: 65px;
+  white-space: nowrap;
+}
