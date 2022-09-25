@@ -1,11 +1,14 @@
+import { Context } from "./context/Context";
 import Layout from "./layout";
 import { Home } from "./pages/Home";
 
 const App = () => {
   return (
-    <Layout>
-      <Home />
-    </Layout>
+    <Context>
+      <Layout>
+        <Home />
+      </Layout>
+    </Context>
   );
 };
 
