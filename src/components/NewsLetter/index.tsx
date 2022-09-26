@@ -1,11 +1,10 @@
-import React, { useState, useCallback, useRef } from "react";
+import React, { useState } from "react";
 import "./styles.css";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { Button } from "../Button";
 import axios from "axios";
-import Loader from "../Loader";
 
 const schema = yup
   .object({

@@ -7,7 +7,6 @@ import { Slide } from "../Slide";
 
 const CardProduct = () => {
   const [products, setProducts] = useState<any[]>([]);
-  console.log("products: ", products);
 
   useEffect(() => {
     axios
