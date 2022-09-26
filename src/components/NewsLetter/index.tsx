@@ -4,29 +4,41 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { Button } from "../Button";
+import axios from "axios";
 
 const schema = yup
   .object({
     name: yup
       .string()
-      .min(3, "A rua deve ter no mínimo 3 caracteres")
+      .min(3, "O nome deve ter no mínimo 3 caracteres")
       .required("Nome obrigatório"),
     email: yup.string().email("Email inválido").required("Campo obrigatório"),
   })
   .required();
 
+type IFormProps = { name: string; email: string };
+
 export const NewsLetters = () => {
   const [success, setSuccess] = useState(false);
 
   const {
-    register,
     handleSubmit,
+    register,
     formState: { errors },
-  } = useForm({
+  } = useForm<IFormProps>({
     resolver: yupResolver(schema),
   });
+
   const onSubmit = (data: any) => {
-    setSuccess(true);
+    axios
+      .post("https://corebiz-test.herokuapp.com/api/v1/newsletter", data)
+      .then((res) => {
+        setSuccess(true);
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
   return (
     <div className="news-letter">
@@ -47,11 +59,11 @@ export const NewsLetters = () => {
           <form onSubmit={handleSubmit(onSubmit)}>
             <div>
               <input {...register("name")} placeholder="Digite seu nome" />
-              {/* <p>{errors.name?.message}</p> */}
+              <span>{errors.name?.message}</span>
             </div>
             <div>
               <input {...register("email")} placeholder="Digite seu email" />
-              {/* <p>{errors.email?.message}</p> */}
+              <span>{errors.email?.message}</span>
             </div>
             <Button text="Eu quero!" />
           </form>
