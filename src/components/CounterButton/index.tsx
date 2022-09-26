@@ -1,5 +1,4 @@
-import axios from "axios";
-import React, { FC, useContext } from "react";
+import React, { FC } from "react";
 import { CartState } from "../../context/Context";
 
 import { ButtonProps } from "./counter-button.types";

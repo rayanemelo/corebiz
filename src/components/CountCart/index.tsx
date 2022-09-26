@@ -1,4 +1,3 @@
-import { FC } from "react";
 import { TiShoppingCart } from "react-icons/ti";
 import "./styles.css";
 import { CartState } from "../../context/Context";

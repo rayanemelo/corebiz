@@ -1,0 +1,68 @@
+.news-letter {
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f2f2;
+  padding: 30px 0;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+}
+
+.news-letter h2 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.news-letter p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.news-letter form {
+  display: flex;
+  max-width: 1440px;
+}
+.news-letter form > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.news-letter form input {
+  width: 280px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  margin: 0 5px;
+  padding-left: 10px;
+}
+
+.news-letter form span {
+  font-size: 12px;
+  color: #d7182a;
+  margin: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .news-letter form input {
+    margin: 5px 0px;
+  }
+}
+
+.news-letter h1 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .news-letter form {
+    flex-direction: column;
+  }
+  .news-letter h1 {
+    margin: 8px;
+    text-align: center;
+  }
+}
