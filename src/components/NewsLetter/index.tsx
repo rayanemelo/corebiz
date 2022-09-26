@@ -5,6 +5,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { Button } from "../Button";
 import axios from "axios";
+import Loader from "../Loader";
 
 const schema = yup
   .object({
@@ -20,6 +21,7 @@ type IFormProps = { name: string; email: string };
 
 export const NewsLetters = () => {
   const [success, setSuccess] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const {
     handleSubmit,
@@ -30,6 +32,7 @@ export const NewsLetters = () => {
   });
 
   const onSubmit = (data: any) => {
+    setLoading(true);
     axios
       .post("https://corebiz-test.herokuapp.com/api/v1/newsletter", data)
       .then((res) => {
@@ -38,37 +41,42 @@ export const NewsLetters = () => {
       })
       .catch((err) => {
         console.log(err);
+      })
+      .finally(() => {
+        setLoading(false);
       });
   };
   return (
-    <div className="news-letter">
-      {success ? (
-        <>
-          <h2>Seu e-mail foi cadastrado com sucesso!</h2>
-          <p>
-            A partir de agora você receberá as novidade e ofertas exclusivas.
-          </p>
-          <Button
-            text="Cadastrar novo e-mail"
-            onClick={() => setSuccess(false)}
-          />
-        </>
-      ) : (
-        <>
-          <h1>Participe de nossas news com promoções e novidades!</h1>
-          <form onSubmit={handleSubmit(onSubmit)}>
-            <div>
-              <input {...register("name")} placeholder="Digite seu nome" />
-              <span>{errors.name?.message}</span>
-            </div>
-            <div>
-              <input {...register("email")} placeholder="Digite seu email" />
-              <span>{errors.email?.message}</span>
-            </div>
-            <Button text="Eu quero!" />
-          </form>
-        </>
-      )}
-    </div>
+    <>
+      <div className="news-letter">
+        {success ? (
+          <>
+            <h2>Seu e-mail foi cadastrado com sucesso!</h2>
+            <p>
+              A partir de agora você receberá as novidade e ofertas exclusivas.
+            </p>
+            <Button
+              text="Cadastrar novo e-mail"
+              onClick={() => setSuccess(false)}
+            />
+          </>
+        ) : (
+          <>
+            <h1>Participe de nossas news com promoções e novidades!</h1>
+            <form onSubmit={handleSubmit(onSubmit)}>
+              <div>
+                <input {...register("name")} placeholder="Digite seu nome" />
+                <span>{errors.name?.message}</span>
+              </div>
+              <div>
+                <input {...register("email")} placeholder="Digite seu email" />
+                <span>{errors.email?.message}</span>
+              </div>
+              <Button text="Eu quero!" disabled={loading} />
+            </form>
+          </>
+        )}
+      </div>
+    </>
   );
 };

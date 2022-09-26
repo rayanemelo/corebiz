@@ -1,5 +1,6 @@
 .card-product {
   display: flex;
+  justify-content: center;
 }
 
 .card-product div {
