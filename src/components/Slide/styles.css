@@ -1,0 +1,7 @@
+.slide {
+  display: flex;
+  max-width: 1230px;
+  width: 100%;
+  overflow: auto;
+  margin: 0 auto;
+}

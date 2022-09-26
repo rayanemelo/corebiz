@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { CounterButton } from "../CounterButton";
 import "./styles.css";
 import { IoStarOutline, IoStarSharp } from "react-icons/io5";
+import { Slide } from "../Slide";
 
 const CardProduct = () => {
   const [products, setProducts] = useState<any[]>([]);
@@ -47,8 +48,8 @@ const CardProduct = () => {
 
   return (
     <div className="card-product">
-      {products.map((item) => {
-        return (
+      <Slide>
+        {products.map((item) => (
           <div>
             <div className="container-tag">
               <img src={item.imageUrl} alt={item.productName} />
@@ -82,8 +83,8 @@ const CardProduct = () => {
               </div>
             </div>
           </div>
-        );
-      })}
+        ))}
+      </Slide>
     </div>
   );
 };

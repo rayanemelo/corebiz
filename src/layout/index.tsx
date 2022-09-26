@@ -11,7 +11,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
       <Header />
       <Carousel />
       <div className="wrapper">{children}</div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

@@ -5,7 +5,9 @@ import { Home } from "./pages/Home";
 const App = () => {
   return (
     <Context>
-      <Layout>{/* <Home /> */}</Layout>
+      <Layout>
+        <Home />
+      </Layout>
     </Context>
   );
 };
