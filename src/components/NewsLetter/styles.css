@@ -6,6 +6,8 @@
   justify-content: center;
   width: 100%;
   align-items: center;
+  text-align: center;
+  height: 100px;
 }
 
 .news-letter h2 {
@@ -58,6 +60,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .news-letter {
+    height: 100%;
+    padding: 20px 0;
+  }
   .news-letter form {
     flex-direction: column;
   }

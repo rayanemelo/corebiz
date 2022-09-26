@@ -2,7 +2,6 @@
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
-  padding: 20px;
 }
 
 .home h1 {
@@ -11,5 +10,6 @@
   border-bottom: 4px solid #c0c0c0;
   width: 65px;
   white-space: nowrap;
+  margin-left: 20px;
   margin-bottom: 20px;
 }

@@ -13,7 +13,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
       <Carousel />
       <div className="wrapper">{children}</div>
       <NewsLetters />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

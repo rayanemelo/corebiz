@@ -1,5 +1,5 @@
 import CardProduct from "../../components/CardProduct";
-import { Slide } from "../../components/Slide";
+
 import "./styles.css";
 export const Home = () => {
   return (
