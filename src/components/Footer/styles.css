@@ -55,6 +55,8 @@ footer .container .logos p {
   footer {
     max-height: 385px;
     height: 100%;
+    position: absolute;
+    margin-top: auto;
   }
 
   footer .container {

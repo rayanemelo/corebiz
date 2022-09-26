@@ -5,7 +5,6 @@ import { CartState } from "../../context/Context";
 
 export const CountCart = () => {
   const { quantity } = CartState();
-  console.log("quantity: ", quantity);
   return (
     <>
       <div className="flex">
