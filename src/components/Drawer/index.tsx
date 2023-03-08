@@ -1,9 +1,8 @@
-import React, { FC } from "react";
 import "./styles.css";
 import { DrawerProps } from "./drawer.types";
 import { FiUser, FiX } from "react-icons/fi";
 
-export const Drawer: FC<DrawerProps> = ({ isOpen, onClose }) => {
+export const Drawer = ({ isOpen, onClose }: DrawerProps) => {
   return (
     <>
       {isOpen && <div className="mask" onClick={onClose} />}

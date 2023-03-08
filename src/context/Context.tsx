@@ -1,4 +1,4 @@
-import { createContext, FC, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
 type CartProps = {
   children: React.ReactNode;
@@ -11,7 +11,7 @@ type CartContextProps = {
 
 const Cart = createContext({} as CartContextProps);
 
-export const Context: FC<CartProps> = ({ children }) => {
+export const Context = ({ children }: CartProps) => {
   const [quantity, setQuantity] = useState(0);
 
   function getStorageQuantity() {

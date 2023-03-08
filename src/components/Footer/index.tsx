@@ -1,11 +1,10 @@
-import React, { FC } from "react";
 import { ButtonWithIcon } from "../ButtonWithIcon";
 import "./styles.css";
 import { FaEnvelope, FaHeadphones } from "react-icons/fa";
 import logoCorebiz from "../../assets/logo-corebiz.png";
 import logoVtex from "../../assets/logo-vtex.png";
 
-export const Footer: FC<any> = () => {
+export const Footer= () => {
   return (
     <footer>
       <div className="container">

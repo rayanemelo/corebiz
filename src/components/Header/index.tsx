@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import { useState } from "react";
 import { Search } from "../Search";
 import "./styles.css";
 import { FiUser, FiMenu } from "react-icons/fi";
@@ -6,7 +6,7 @@ import logo from "../../assets/logo-corebiz-header.png";
 import { Drawer } from "../Drawer";
 import { CountCart } from "../CountCart";
 
-export const Header: FC<any> = () => {
+export const Header = () => {
   const [open, setOpen] = useState(false);
   return (
     <>

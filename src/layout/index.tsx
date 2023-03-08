@@ -1,4 +1,3 @@
-import { FC } from "react";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import { LayoutProps } from "./layout.types";
@@ -6,7 +5,7 @@ import "./styles.css";
 import { Carousel } from "../components/Carousel";
 import { NewsLetters } from "../components/NewsLetter";
 
-const Layout: FC<LayoutProps> = ({ children }) => {
+const Layout = ({ children }: LayoutProps) => {
   return (
     <>
       <Header />

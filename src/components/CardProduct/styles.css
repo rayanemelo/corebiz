@@ -1,6 +1,7 @@
 .card-product {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .card-product div {
@@ -9,6 +10,11 @@
 
 .card-product .container-tag {
   display: flex;
+}
+
+.card-product .container-tag img {
+  height: 225px;
+  width: 100%; 
 }
 
 .card-product .tag {
