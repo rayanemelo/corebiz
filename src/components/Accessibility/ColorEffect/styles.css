@@ -1,0 +1,33 @@
+.color_effects {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.color_effects li {
+  background: #f6f6f6;
+  border-radius: 7px;
+  border: 2px solid transparent;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 119px;
+  transition: all 0.15s ease;
+}
+.color_effects li:hover {
+  border: 2px solid #000;
+  cursor: pointer;
+}
+
+.color_effects li p {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+.selected {
+  border: 2px solid #000;
+}

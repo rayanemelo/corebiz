@@ -1,0 +1,26 @@
+.accessibility {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+}
+
+.accessibility .circle {
+  background-color: #000;
+  padding: 6px 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.accessibility_options {
+  position: fixed;
+  right: 3.5rem;
+  bottom: 10px;
+  padding: 2px;
+  border-radius: 2px;
+  background-color: #fff;
+  border: 1px solid #000;
+  max-width: 400px;
+  width: 100%;
+  max-height: 500px;
+  height: 100%;
+}
